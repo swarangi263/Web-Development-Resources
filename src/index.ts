@@ -33,7 +33,7 @@ enum Direction1{
     Right,
     Left
 }
-console.log(Direction1)
+// console.log(Direction1)
 
 enum Direction2{
     Up = 'Up',
@@ -43,8 +43,7 @@ enum Direction2{
 }
 
 //Objects- instance containing key value pair
-
-//type template
+//type template | type can be used with primitives & unions
 type User = {
     id:number
     name: string
@@ -57,14 +56,42 @@ const user: User = {
 
 
 //Void - no return type
-
 function greet() : void {
     console.log("Hello")
 }
 
 //only null & undefined is assigned to void
-
 let a : void = undefined
 // let b: void = 1 //Error
 
+
+//Type Assertion
+let cid: any = 1
+//let customerId = <number>cid
+
+//assigning the value of cid to customerId with specifying the type
+let customerId = cid as number 
+
+//Functions
+function addNum(x:  number, y:number) : number{
+    return x+y
+}
+
+//Interfaces
+interface UserInterface {
+    id:number
+    name: string
+    age?: number //optional
+}
+const user1: UserInterface = {
+    id: 1,
+    name: 'Swara'
+}
+
+interface Mathfunc {
+    (x:number, y:number): number 
+}
+
+const sub: Mathfunc = (x:number, y:number): number => x-y
+const add: Mathfunc = (x:number, y:number): number => x+y
 
