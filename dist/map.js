@@ -52,3 +52,15 @@ console.log(addDepartment);
 // Print square of items in array
 let nums = [1, 2, 3, 4];
 console.log(nums.map((num => num * num)));
+// Nested Maps
+const scores = [[2, 7], [13, 47], [55, 77]];
+// let num = 
+scores.map(function (subarray) {
+    // console.log(subarray)
+    // return 
+    subarray.map(function (number) {
+        // return 
+        console.log(number);
+    });
+});
+// console.log(num)
