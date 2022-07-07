@@ -1,6 +1,8 @@
 "use strict";
-//MAP Function
+// MAP Function
 // Syntax array.map(callback[, thisObject])
+// array.map(callback(element, index, arr), thisArg)
+// Length would be the same of the array function when mapped with the transformed items
 const data = [
     {
         name: 'Swara',
